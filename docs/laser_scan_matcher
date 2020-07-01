@@ -1,0 +1,10 @@
+cd src
+rm -rf csm
+rm -rf scan_tools
+
+git clone https://github.com/AndreaCensi/csm
+git clone https://github.com/ccny-ros-pkg/scan_tools.git
+
+catkin_make_isolated
+
+#и не забыть внести workspace в .bashrc
