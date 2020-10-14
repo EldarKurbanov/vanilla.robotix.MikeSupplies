@@ -140,6 +140,8 @@ void LaserScanMatcher::initParams()
     base_frame_ = "base_link";
   if (!nh_private_.getParam ("fixed_frame", fixed_frame_))
     fixed_frame_ = "world";
+  if (!nh_private_.getParam ("scan_topic", scan_topic_))
+    scan_topic_ = "scan";
 
   // **** input type - laser scan, or point clouds?
   // if false, will subscribe to LaserScan msgs on /scan.
